@@ -1,0 +1,58 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+
+venv/
+.venv/
+env/
+.env/
+
+# Jupyter Notebook
+
+.ipynb_checkpoints/
+
+# IDE / VS Code
+
+.vscode/
+.idea/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets / Credentials
+
+*.env
+.env.*
+!.env.example
+
+# Logs
+
+*.log
+
+# Python packaging
+
+build/
+dist/
+*.egg-info/
+
+# Local databases / database dumps
+
+*.sqlite
+*.sqlite3
+*.db
+*.sql.gz
+
+# Temporary files
+
+*.tmp
+*.temp
+*.bak
+*.swp
