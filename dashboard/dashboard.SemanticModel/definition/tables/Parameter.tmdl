@@ -1,0 +1,52 @@
+table Parameter
+	lineageTag: 183ccc48-51b9-4a5d-bb73-c782c108bf76
+
+	column Parameter
+		lineageTag: 4eb75408-351a-4467-bac9-6074527bba2a
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		isHidden
+		lineageTag: 4cce0f6a-5a43-477a-9da8-b0a9b14ac7c3
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: f0c5e7e6-8335-4eb8-86db-de2e96a3387a
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Parameter = calculated
+		mode: import
+		source =
+				{
+				    ("State", NAMEOF('raw_dataset'[State]), 0),
+				    ("Sub-Category", NAMEOF('raw_dataset'[Sub-Category]), 1),
+				    ("Region", NAMEOF('raw_dataset'[Region]), 2),
+				    ("Country", NAMEOF('raw_dataset'[Country]), 3),
+				    ("City", NAMEOF('raw_dataset'[City]), 4),
+				    ("Category", NAMEOF('raw_dataset'[Category]), 5)
+				}
+
+	annotation PBI_Id = 92c95d9c23164b859f023805ec2b0a8f
+

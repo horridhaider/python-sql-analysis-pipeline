@@ -1,0 +1,47 @@
+table 'Parameter 2'
+	lineageTag: 4b94169e-9e52-4afb-9325-1cb8ec557a67
+
+	column Parameter
+		lineageTag: bd75739b-f4b3-40e4-a223-14ec50627f09
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		isHidden
+		lineageTag: 7aec7fc1-4230-4bd4-a8d3-5f1cde6117ce
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: 40933d65-5676-472f-9032-493b093edcd6
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parameter 2' = calculated
+		mode: import
+		source =
+				{
+				    ("Region", NAMEOF('raw_dataset'[Region]), 0)
+				}
+
+	annotation PBI_Id = 06d1635d028247d588a4f91393743b32
+

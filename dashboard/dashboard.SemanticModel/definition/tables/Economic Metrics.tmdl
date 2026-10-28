@@ -1,0 +1,50 @@
+table 'Economic Metrics'
+	lineageTag: 2240e3bc-e419-42c4-a086-8ba0792316b4
+
+	column 'Economic Metrics'
+		lineageTag: 730fe1c2-8380-49bd-b72d-4913ff744ffa
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Economic Metrics Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Economic Metrics Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Economic Metrics Fields'
+		isHidden
+		lineageTag: 469adb45-6f5d-4f1d-9939-4c0396ffff3d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Economic Metrics Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Economic Metrics Order'
+		isHidden
+		formatString: 0
+		lineageTag: e4870814-6830-4f49-9d9c-523beb7df723
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Economic Metrics' = calculated
+		mode: import
+		source =
+				{
+				    ("Total Sales", NAMEOF('raw_dataset'[Total Sales]), 0),
+				    ("Total Profit", NAMEOF('raw_dataset'[Total Profit]), 1),
+				    ("Total Orders", NAMEOF('raw_dataset'[Total Orders]), 2),
+				    ("No. of Items Sold", NAMEOF('raw_dataset'[No. of Items Sold]), 3)
+				}
+
+	annotation PBI_Id = 262fc1be20fa4a3baf6c20041b4f0718
+

@@ -1,0 +1,49 @@
+table 'Geographical Metrics'
+	lineageTag: 4f36403b-6a65-4e90-a6fc-24beb6a50f3e
+
+	column 'Geographical Metrics'
+		lineageTag: 62cf2cdb-396e-42f2-a412-fc01592138f7
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Geographical Metrics Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Geographical Metrics Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Geographical Metrics Fields'
+		isHidden
+		lineageTag: cfaf5869-7612-45d0-ba86-76e3f9b47cce
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Geographical Metrics Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Geographical Metrics Order'
+		isHidden
+		formatString: 0
+		lineageTag: d6f86167-9f33-4325-ab48-cc92d97ef60d
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Geographical Metrics' = calculated
+		mode: import
+		source =
+				{
+				    ("Region", NAMEOF('raw_dataset'[Region]), 0),
+				    ("State", NAMEOF('raw_dataset'[State]), 1),
+				    ("City", NAMEOF('raw_dataset'[City]), 2)
+				}
+
+	annotation PBI_Id = 7392c437d9c54928acdca5b4546ef6c4
+
