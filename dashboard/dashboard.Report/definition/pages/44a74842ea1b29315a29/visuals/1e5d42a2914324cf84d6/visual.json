@@ -48,51 +48,6 @@
               "queryRef": "raw_dataset.Total Sales",
               "nativeQueryRef": "Total Sales",
               "displayName": "Total Sales"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "raw_dataset"
-                    }
-                  },
-                  "Property": "Total Profit"
-                }
-              },
-              "queryRef": "raw_dataset.Total Profit",
-              "nativeQueryRef": "Total Profit",
-              "displayName": "Total Profit"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "raw_dataset"
-                    }
-                  },
-                  "Property": "Total Orders"
-                }
-              },
-              "queryRef": "raw_dataset.Total Orders",
-              "nativeQueryRef": "Total Orders",
-              "displayName": "Total Orders"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "raw_dataset"
-                    }
-                  },
-                  "Property": "No. of Items Sold"
-                }
-              },
-              "queryRef": "raw_dataset.No. of Items Sold",
-              "nativeQueryRef": "No. of Items Sold",
-              "displayName": "No. of Items Sold"
             }
           ],
           "fieldParameters": [
@@ -108,7 +63,7 @@
                 }
               },
               "index": 0,
-              "length": 4
+              "length": 1
             }
           ]
         }

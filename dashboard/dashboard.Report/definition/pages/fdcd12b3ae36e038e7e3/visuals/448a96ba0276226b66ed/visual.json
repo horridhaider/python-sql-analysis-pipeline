@@ -59,12 +59,12 @@
                       "Entity": "raw_dataset"
                     }
                   },
-                  "Property": "Total Profit"
+                  "Property": "Total Orders"
                 }
               },
-              "queryRef": "raw_dataset.Total Profit",
-              "nativeQueryRef": "Total Profit",
-              "displayName": "Total Profit"
+              "queryRef": "raw_dataset.Total Orders",
+              "nativeQueryRef": "Total Orders",
+              "displayName": "Total Orders"
             }
           ],
           "fieldParameters": [
@@ -95,7 +95,7 @@
                     "Entity": "raw_dataset"
                   }
                 },
-                "Property": "Total Profit"
+                "Property": "Total Orders"
               }
             },
             "direction": "Descending"

@@ -21,6 +21,7 @@ ref table Parameter
 ref table 'Parameter 2'
 ref table 'Economic Metrics'
 ref table 'Geographical Metrics'
+ref table 'Date Metrics'
 
 ref cultureInfo en-US
 

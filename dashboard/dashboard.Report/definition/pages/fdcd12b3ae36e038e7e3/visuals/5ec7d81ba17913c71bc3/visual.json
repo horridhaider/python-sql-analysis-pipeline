@@ -106,7 +106,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''raw_dataset''[Total Profit]'"
+                                "Value": "'''raw_dataset''[Total Orders]'"
                               }
                             }
                           ]
@@ -134,7 +134,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''raw_dataset''[Total Profit]'"
+                                      "Value": "'''raw_dataset''[Total Orders]'"
                                     }
                                   }
                                 ]
@@ -158,7 +158,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Total Profit"
+                            "0": "Total Orders"
                           }
                         ]
                       }

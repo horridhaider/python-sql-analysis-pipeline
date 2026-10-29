@@ -4,10 +4,10 @@
   "position": {
     "x": 1138.6046511627906,
     "y": 683.16279069767438,
-    "z": 20002,
+    "z": 21000,
     "height": 370.60465116279067,
     "width": 745.67441860465112,
-    "tabOrder": 20002
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "tableEx",
@@ -37,12 +37,12 @@
                       "Entity": "raw_dataset"
                     }
                   },
-                  "Property": "Total Profit"
+                  "Property": "Total Orders"
                 }
               },
-              "queryRef": "raw_dataset.Total Profit",
-              "nativeQueryRef": "Total Profit",
-              "displayName": "Total Profit"
+              "queryRef": "raw_dataset.Total Orders",
+              "nativeQueryRef": "Total Orders",
+              "displayName": "Total Orders"
             }
           ],
           "fieldParameters": [
@@ -74,7 +74,7 @@
                     "Entity": "raw_dataset"
                   }
                 },
-                "Property": "Total Profit"
+                "Property": "Total Orders"
               }
             },
             "direction": "Descending"
@@ -534,37 +534,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a499e4404a0ea048ad93",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "raw_dataset"
-              }
-            },
-            "Property": "City"
-          }
-        },
-        "type": "TopN"
-      },
-      {
-        "name": "d1e209b50b909b69a64a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "raw_dataset"
-              }
-            },
-            "Property": "Total Profit"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

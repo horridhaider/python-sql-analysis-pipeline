@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "f34a47fac194d131a973",
   "position": {
-    "x": 38.614525139664806,
-    "y": 120.1340782122905,
-    "z": 8937,
-    "height": 135.15083798882682,
-    "width": 246.70391061452514,
-    "tabOrder": 16000
+    "x": 38.267716535433067,
+    "y": 106.2992125984252,
+    "z": 10000,
+    "height": 148.81889763779526,
+    "width": 246.61417322834646,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,29 @@
               {
                 "textRuns": [
                   {
-                    "value": "Product Analysis",
+                    "value": ""
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Financial ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Arial",
+                      "fontSize": "32pt",
+                      "color": "#a0d1ff"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Analysis",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Arial",

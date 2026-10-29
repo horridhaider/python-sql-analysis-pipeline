@@ -1,0 +1,50 @@
+table 'Date Metrics'
+	lineageTag: 3b9c9ad0-9d65-4f48-b3d2-c8b563c52a17
+
+	column 'Date Metrics'
+		lineageTag: 05f921a4-d6bf-432d-a682-aba00dae643c
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Date Metrics Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Date Metrics Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date Metrics Fields'
+		isHidden
+		lineageTag: c3790278-035d-4073-aa4c-4a4641846929
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Date Metrics Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date Metrics Order'
+		isHidden
+		formatString: 0
+		lineageTag: fa02e93f-0c4d-455c-8567-d3f9fc0d268c
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Date Metrics' = calculated
+		mode: import
+		source =
+				{
+				    ("Year", NAMEOF('raw_dataset'[Order Date].[Year]), 0),
+				    ("Quarter", NAMEOF('raw_dataset'[Order Date].[Quarter]), 1),
+				    ("Month", NAMEOF('raw_dataset'[Order Date].[Month]), 2),
+				    ("Weekday", NAMEOF('raw_dataset'[WeekdayShort]), 3)
+				}
+
+	annotation PBI_Id = 1f06182eabb84a27b513f3a269650aab
+

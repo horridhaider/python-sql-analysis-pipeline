@@ -283,6 +283,22 @@ table raw_dataset
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
+	column WeekdayShort = FORMAT([Order Date], "ddd")
+		lineageTag: eed9a203-63af-4c39-a73c-f377e6431f11
+		summarizeBy: none
+		sortByColumn: WeekdayNum
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekdayNum = WEEKDAY([Order Date], 2)
+		formatString: 0
+		lineageTag: 04a4264d-18df-426d-8fc2-361086d7fd1e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition raw_dataset = m
 		mode: import
 		source =

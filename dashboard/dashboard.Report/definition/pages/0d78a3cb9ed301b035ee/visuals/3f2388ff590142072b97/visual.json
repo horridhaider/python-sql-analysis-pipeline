@@ -4,10 +4,10 @@
   "position": {
     "x": 335.90551181102359,
     "y": 17.00787401574803,
-    "z": 8750,
-    "height": 140.31496062992125,
+    "z": 8000,
+    "height": 104.1732283464567,
     "width": 1564.724409448819,
-    "tabOrder": 13000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "raw_dataset"
                     }
                   },
-                  "Property": "Most Sold Subcategory"
+                  "Property": "Total Sales"
                 }
               },
-              "queryRef": "raw_dataset.Most Sold Subcategory",
-              "nativeQueryRef": "Most Sold Subcategory"
+              "queryRef": "raw_dataset.Total Sales",
+              "nativeQueryRef": "Total Sales"
             },
             {
               "field": {
@@ -37,11 +37,11 @@
                       "Entity": "raw_dataset"
                     }
                   },
-                  "Property": "Least Sold Subcategory"
+                  "Property": "Total Profit"
                 }
               },
-              "queryRef": "raw_dataset.Least Sold Subcategory",
-              "nativeQueryRef": "Least Sold Subcategory"
+              "queryRef": "raw_dataset.Total Profit",
+              "nativeQueryRef": "Total Profit"
             },
             {
               "field": {
@@ -51,11 +51,11 @@
                       "Entity": "raw_dataset"
                     }
                   },
-                  "Property": "Most Profitable Subcategory"
+                  "Property": "Avg Profit Margin"
                 }
               },
-              "queryRef": "raw_dataset.Most Profitable Subcategory",
-              "nativeQueryRef": "Most Profitable Subcategory"
+              "queryRef": "raw_dataset.Avg Profit Margin",
+              "nativeQueryRef": "Avg Profit Margin"
             },
             {
               "field": {
@@ -65,16 +65,31 @@
                       "Entity": "raw_dataset"
                     }
                   },
-                  "Property": "Least Profitable Subcategory"
+                  "Property": "Total Orders"
                 }
               },
-              "queryRef": "raw_dataset.Least Profitable Subcategory",
-              "nativeQueryRef": "Least Profitable Subcategory"
+              "queryRef": "raw_dataset.Total Orders",
+              "nativeQueryRef": "Total Orders"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "raw_dataset"
+                  }
+                },
+                "Property": "Total Sales"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -297,7 +312,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
